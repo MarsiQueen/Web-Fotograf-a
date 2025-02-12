@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Charl's.Raw Studio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/stylesGaleria.css">
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+<body>
+
+  <!-- Contenido principal de la página -->
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li class="logo"><img src="img/CHARLS RAW BLANCO PNG.png" alt="Logo"><h1>Charls.Raw Studio</h1></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carta.html">Promociones</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <div class="carousel">
+    <button class="carousel-button prev" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-button next" onclick="nextSlide()">&#10095;</button>
+    <div class="carousel-container">
+        <img src="img/HyJ_06072024_360.JPG" alt="Imagen 1" class="carousel-image">
+        <img src="img/HyJ_06072024_070.JPG" alt="Imagen 2" class="carousel-image">
+        <img src="img/HyJ_06072024_108.JPG" alt="Imagen 3" class="carousel-image">
+    </div>
+  </div>
+
+  <section class="fullscreen-section text-section">
+    <h2>Fotógrafo de bodas, comuniones y eventos</h2>
+    <div class="columns">
+      <div class="column-left">
+        <p>Capturando momentos únicos e inolvidables que perduran en el tiempo. Cada fotografía es una historia que cuenta emociones, lugares y experiencias. Mi objetivo es plasmar esos detalles especiales que hacen que cada instante sea irrepetible.</p>
+        <p>Desde retratos llenos de personalidad hasta paisajes impresionantes, cada clic del obturador es una oportunidad para crear arte. Permíteme acompañarte en tus proyectos y convertir tus ideas en imágenes memorables.</p>
+      </div>
+      <div class="column-right">
+        <blockquote>
+          "La fotografía es una forma de sentir, de tocar, de amar." 
+          <br><br><cite>- Yousuf Karsh</cite>
+        </blockquote>
+        <img src="img/fluir_estrella.png" alt="Logo">
+      </div>
+    </div>
+  </section>
+  
+  <section class="fullscreen-section image-section" style="background-image: url('img/HyJ_06072024_360.JPG');">
+  </section>
+  
+  <section class="fullscreen-section text-section">
+      <h2>Sobre mí</h2>
+      <div class="columns">
+        <div class="column-left">
+          <p>Hola, soy Carlos Martin. Mi pasión es capturar la esencia de cada momento a través de la lente.</p>
+          <p>Con más de 3 años de experiencia en la fotografía profesional, he tenido la oportunidad de trabajar en una variedad de proyectos, desde retratos personales hasta eventos corporativos y paisajes naturales. Cada foto que tomo está cargada de emociones y detalles que buscan contar una historia única.</p>
+          <p>Mis áreas de especialización incluyen fotografía de bodas, retratos artísticos y fotografía de viajes. Me encanta explorar nuevos lugares y capturar la belleza del mundo desde diferentes perspectivas.</p>
+        </div>
+        <div class="column-right">
+          <p>Fuera de mi trabajo como fotógrafo, disfruto de largas caminatas al aire libre y leer libros de arte. Creo que estas experiencias enriquecen mi visión creativa y me inspiran a seguir mejorando día a día.</p>
+          <p>Si estás interesado en trabajar juntos o simplemente quieres saber más sobre mi estilo y proceso creativo, no dudes en ponerte en contacto conmigo. ¡Estoy aquí para capturar tus momentos especiales!</p>
+          <img class="luna" src="img/luna.png" alt="Logo">
+        </div>
+      </div>
+  </section>
+
+  <section class="fullscreen-section image-section" style="background-image: url('img/HyJ_06072024_360.JPG');">
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="img/HyJ_06072024_070.JPG" alt="Foto 1" data-category="paisajes">
+      <img src="img/HyJ_06072024_086.JPG" alt="Foto 2" data-category="retratos">
+      <img src="img/HyJ_06072024_108.JPG" alt="Foto 3" data-category="eventos">
+      <img src="img/HyJ_06072024_143.JPG" alt="Foto 4" data-category="paisajes">
+      <img src="img/HyJ_06072024_360.JPG" alt="Foto 5" data-category="retratos">
+      <img src="img/HyJ_06072024_429.JPG" alt="Foto 6" data-category="eventos">
+      <img src="img/HyJ_06072024_472.JPG" alt="Foto 7" data-category="paisajes">
+    </div>
+    <div class="button-container">
+      <a href="galeria.html" class="gallery-button">Ver Galería Completa</a>
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox-modal" style="display: none;">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Imagen Ampliada">
+  </div>
+
+  <footer>
+    <p>Charl's.Raw Studio © 2024 by Marcel Mañas is licensed under CC BY-ND 4.0 </p>
+  </footer>
+
+  <script src="js/scroll.js"></script>
+  <script src="js/up.js"></script>
+  <script src="js/menu-active.js"></script>
+  <script src="js/carrousel.js"></script>
+  <script src="js/lightbox.js"></script>
+</body>
+</html>

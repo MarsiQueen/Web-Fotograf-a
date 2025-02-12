@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería de Fotografías</title>
+  <link rel="stylesheet" href="css/stylesGaleria.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/lightbox.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="galeria.html">Galería</a></li>
+        <li class="logo"><h1>Charl's.Raw Studio</h1></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carta.html">Promociones</a></li>
+    </ul>
+    </nav>
+  </header>
+  <br><p>Disfruta de una selección de mis mejores capturas.</p>
+
+  <!-- Filtros de Categoría -->
+  <div id="filters">
+    <button data-category="all">Todas</button>
+    <button data-category="paisajes">Paisajes</button>
+    <button data-category="retratos">Retratos</button>
+    <button data-category="eventos">Eventos</button>
+  </div>
+
+  <section id="galeria">
+    <div class="galeria">
+      <img src="img/HyJ_06072024_070.JPG" alt="Foto 1" data-category="paisajes">
+      <img src="img/HyJ_06072024_086.JPG" alt="Foto 2" data-category="retratos">
+      <img src="img/HyJ_06072024_108.JPG" alt="Foto 3" data-category="eventos">
+      <img src="img/HyJ_06072024_143.JPG" alt="Foto 4" data-category="paisajes">
+      <img src="img/HyJ_06072024_360.JPG" alt="Foto 5" data-category="retratos">
+      <img src="img/HyJ_06072024_429.JPG" alt="Foto 6" data-category="eventos">
+      <img src="img/HyJ_06072024_472.JPG" alt="Foto 7" data-category="paisajes">
+    </div>
+  </section>
+
+  <div id="lightbox" class="lightbox-modal" style="display: none;">
+    <span class="close">&times;</span>
+    <img id="lightbox-img" src="" alt="Imagen Ampliada">
+  </div>
+
+  <footer>
+    <p>Charl's.Raw Studio © 2024 by Marcel Mañas is licensed under CC BY-ND 4.0 </p>
+  </footer>
+
+  <script src="js/filtroCategorias.js"></script>
+  <script src="js/lightbox.js"></script>
+  <script src="js/up.js"></script>
+  <script src="js/menu-active.js"></script>
+</body>
+</html>

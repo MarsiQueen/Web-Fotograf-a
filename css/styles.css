@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Asegura que el body ocupe toda la altura */
+  color: #333;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+body {
+  display: block; /* Eliminamos flexbox */
+  min-height: 100%; /* Asegura que el contenido ocupe al menos toda la altura de la ventana */
+  padding-bottom: 38px; /* Espacio adicional para el footer */
+  position: relative; /* Asegura que el footer se quede abajo */
+  scroll-behavior: smooth;
+}
+
+
+h1{
+  font-family: Antic Didone;
+  font-style: normal;
+  font-size: 60px;
+}
+
+h2, h3, h4, h5, h6 {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+p, a{
+  font-family: Raleway;
+  font-size: 20px;
+}
+
+blockquote {
+  font-family: Raleway;
+  font-style: italic;
+  font-size: 25px;
+}
+
+header {
+  background-color: #242424;
+  color: #fff;
+  padding: 60px;
+  text-align: center;
+}
+
+.menu {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 160px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.menu a:hover,
+.menu a.active {
+  color: #ff6b6b;
+  font-size: 1.2em;
+}
+
+.menu img {
+  width: 140px; 
+  padding-bottom: 60px;
+}
+
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 1s ease-in-out;
+  align-items: center;
+  height: 100vh;
+}
+
+.carousel-image {
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+/* Estilo base para las secciones */
+.fullscreen-section {
+  width: 100%;
+  height: 60vh; /* Ocupa toda la altura de la ventana */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  flex-direction: column;
+}
+
+/* Secciones de texto */
+.text-section {
+  background-color: #ffffff; /* Fondo blanco */
+  color: #333333;
+  text-align: center;
+  z-index: 2;
+  box-shadow: inset 0px -30px 20px rgba(0, 0, 0, 0.1), 
+              inset 30px 0px 20px rgba(0, 0, 0, 0.1),
+              inset -30px 0px 20px rgba(0, 0, 0, 0.1),
+              inset 0px 30px 20px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #ddd;
+  height: 50vh;
+}
+
+.text-section .content {
+  max-width: 800px; /* Ancho máximo para el contenido */
+  padding: 20px;
+}
+
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.column-left, .column-right {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro del div */
+}
+
+.column-left p {
+  margin-bottom: 10px;
+}
+
+.column-left p, .column-right blockquote, .column-right p {
+  text-align: left; /* Alinea el texto a la izquierda dentro de los elementos */
+  max-width: 80%; /* Limita el ancho del texto para evitar que se extienda demasiado */
+  margin: 10px;
+}
+
+.luna{
+  width: 100px;
+  padding-top: 30px;
+}
+
+/* Secciones de imagen */
+.image-section {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* Contenedor del botón */
+.button-container {
+  margin-top: 30px;
+}
+
+/* Estilo para el botón */
+.gallery-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #242424;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón */
+.gallery-button:hover {
+  background-color: #141414;
+}
+
+footer {
+  background-color: #242424;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+#volver-arriba {
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#volver-arriba:hover {
+  background-color: #555;
+}
