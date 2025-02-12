@@ -5,48 +5,47 @@
 }
 
 html, body {
-  height: 100%; /* Asegura que el body ocupe toda la altura */
+  height: 100%;
   color: #333;
   background-color: #f5f5f5;
   overflow-x: hidden;
 }
 
 body {
-  display: block; /* Eliminamos flexbox */
-  min-height: 100%; /* Asegura que el contenido ocupe al menos toda la altura de la ventana */
-  padding-bottom: 38px; /* Espacio adicional para el footer */
-  position: relative; /* Asegura que el footer se quede abajo */
+  display: block;
+  min-height: 100%;
+  padding-bottom: 38px;
+  position: relative;
   scroll-behavior: smooth;
 }
 
-
-h1{
-  font-family: Antic Didone;
+h1 {
+  font-family: 'Antic Didone', serif;
   font-style: normal;
-  font-size: 60px;
+  font-size: 4rem; /* Cambiamos a rem para ser más flexible */
 }
 
 h2, h3, h4, h5, h6 {
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  font-size: 35px;
+  font-size: 2rem; /* Cambiamos a rem */
 }
 
-p, a{
-  font-family: Raleway;
-  font-size: 20px;
+p, a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.4rem; /* Cambiamos a rem */
 }
 
 blockquote {
-  font-family: Raleway;
+  font-family: 'Raleway', sans-serif;
   font-style: italic;
-  font-size: 25px;
+  font-size: 1.4rem; /* Cambiamos a rem */
 }
 
 header {
   background-color: #242424;
   color: #fff;
-  padding: 60px;
+  padding: 2rem; /* Reducimos el padding en pantallas pequeñas */
   text-align: center;
 }
 
@@ -55,7 +54,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 160px;
+  gap: 10rem; /* Ajustamos el espacio entre los elementos */
   margin: 0;
   padding: 0;
 }
@@ -67,21 +66,20 @@ header {
 .menu a {
   text-decoration: none;
   color: #fff;
-  font-size: 16px;
+  font-size: 1.2rem; /* Cambiamos a rem */
   transition: color 0.3s ease, font-size 0.3s ease;
 }
 
 .menu a:hover,
 .menu a.active {
   color: #ff6b6b;
-  font-size: 1.2em;
+  font-size: 1.2rem; /* Cambiamos a rem */
 }
 
 .menu img {
-  width: 140px; 
-  padding-bottom: 60px;
+  width: 100px;
+  padding-bottom: 2rem; /* Reducimos el padding en pantallas pequeñas */
 }
-
 
 .carousel {
   position: relative;
@@ -126,14 +124,13 @@ header {
 }
 
 section {
-  padding: 50px;
+  padding: 2rem; /* Reducimos el padding en pantallas pequeñas */
   text-align: center;
 }
 
-/* Estilo base para las secciones */
 .fullscreen-section {
   width: 100%;
-  height: 60vh; /* Ocupa toda la altura de la ventana */
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -142,9 +139,8 @@ section {
   flex-direction: column;
 }
 
-/* Secciones de texto */
 .text-section {
-  background-color: #ffffff; /* Fondo blanco */
+  background-color: #ffffff;
   color: #333333;
   text-align: center;
   z-index: 2;
@@ -153,46 +149,41 @@ section {
               inset -30px 0px 20px rgba(0, 0, 0, 0.1),
               inset 0px 30px 20px rgba(0, 0, 0, 0.1); 
   border: 1px solid #ddd;
-  height: 50vh;
+  height: auto; /* Cambiamos a auto para que se ajuste al contenido */
 }
 
 .text-section .content {
-  max-width: 800px; /* Ancho máximo para el contenido */
-  padding: 20px;
+  max-width: 800px;
+  padding: 1rem; /* Reducimos el padding en pantallas pequeñas */
 }
-
 
 .columns {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 1rem; /* Reducimos el margen en pantallas pequeñas */
+  flex-wrap: wrap; /* Permite que las columnas se ajusten en varias líneas */
 }
 
 .column-left, .column-right {
   flex: 1;
-  padding: 20px;
+  padding: 1rem; /* Reducimos el padding en pantallas pequeñas */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra el contenido horizontalmente */
-  text-align: center; /* Centra el texto dentro del div */
-}
-
-.column-left p {
-  margin-bottom: 10px;
+  align-items: center;
+  text-align: center;
 }
 
 .column-left p, .column-right blockquote, .column-right p {
-  text-align: left; /* Alinea el texto a la izquierda dentro de los elementos */
-  max-width: 80%; /* Limita el ancho del texto para evitar que se extienda demasiado */
-  margin: 10px;
+  text-align: left;
+  max-width: 100%; /* Permitimos que el texto ocupe todo el ancho en pantallas pequeñas */
+  margin: 0.5rem;
 }
 
-.luna{
-  width: 100px;
-  padding-top: 30px;
+.luna {
+  width: 80px; /* Reducimos el tamaño de la imagen en pantallas pequeñas */
+  padding-top: 1rem; /* Reducimos el padding en pantallas pequeñas */
 }
 
-/* Secciones de imagen */
 .image-section {
   background-size: cover;
   background-position: center;
@@ -200,16 +191,14 @@ section {
   z-index: 1;
 }
 
-/* Contenedor del botón */
 .button-container {
-  margin-top: 30px;
+  margin-top: 1.5rem; /* Reducimos el margen en pantallas pequeñas */
 }
 
-/* Estilo para el botón */
 .gallery-button {
   display: inline-block;
-  padding: 15px 30px;
-  font-size: 1.2rem;
+  padding: 1rem 2rem; /* Reducimos el padding en pantallas pequeñas */
+  font-size: 1rem; /* Cambiamos a rem */
   color: #fff;
   background-color: #242424;
   text-decoration: none;
@@ -217,7 +206,6 @@ section {
   transition: background-color 0.3s ease;
 }
 
-/* Efecto hover en el botón */
 .gallery-button:hover {
   background-color: #141414;
 }
@@ -226,7 +214,7 @@ footer {
   background-color: #242424;
   color: #fff;
   text-align: center;
-  padding: 10px;
+  padding: 1rem; /* Reducimos el padding en pantallas pequeñas */
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -243,4 +231,39 @@ footer {
 
 #volver-arriba:hover {
   background-color: #555;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem; /* Reducimos el tamaño del título en pantallas pequeñas */
+  }
+
+  h2, h3, h4, h5, h6 {
+    font-size: 1.5rem; /* Reducimos el tamaño de los subtítulos */
+  }
+
+  .menu {
+    gap: 1rem; /* Reducimos el espacio entre los elementos del menú */
+  }
+
+  .carousel-container {
+    height: 50vh; /* Reducimos la altura del carrusel en pantallas pequeñas */
+  }
+
+  .fullscreen-section {
+    height: 50vh; /* Reducimos la altura de las secciones fullscreen */
+  }
+
+  .text-section {
+    height: auto; /* Cambiamos a auto para que se ajuste al contenido */
+  }
+
+  .columns {
+    flex-direction: column; /* Colocamos las columnas en una sola columna */
+  }
+
+  .column-left, .column-right {
+    padding: 0.5rem; /* Reducimos el padding en pantallas pequeñas */
+  }
 }
